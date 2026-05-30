@@ -265,7 +265,7 @@ impl PadmetSpec {
         self.get_nodes_of_type("reaction")
     }
 
-    /// Get all the reactions from a padmet instance
+    /// Get all the genes from a padmet instance
     pub fn get_genes(&self) -> Vec<Node> {
         self.get_nodes_of_type("gene")
     }
