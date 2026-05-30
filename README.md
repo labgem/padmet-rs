@@ -1,0 +1,37 @@
+# padmet 🧬 💻
+<!-- 
+![tests](https://github.com/sortion/padmet/workflows/tests/badge.svg)
+![lints](https://github.com/sortion/padmet/workflows/lints/badge.svg)
+![msrv](https://github.com/sortion/padmet/workflows/msrv/badge.svg)
+[![website](https://github.com/sortion/padmet/workflows/website/badge.svg)](https://sortion.github.io/padmet)
+[![dev-doc](https://img.shields.io/badge/dev-doc-blue)](https://sortion.github.io/padmet/doc/padmet)
+[![license](https://img.shields.io/badge/license--purple)](/blob/main/LICENSE)
+[![copier](https://img.shields.io/badge/copier-template-yellow)](https://github.com/natir/copier-rust)
+-->
+
+Read and write PADMet files
+
+## Usage
+
+Add this in your Cargo.toml
+```
+padmet = { version = "0.1" }
+```
+
+### From source
+
+```bash
+git clone {repository_uri}
+cd 
+cargo install --path
+```
+
+## How to cite
+
+```
+Samuel Ortion, padmet: Read and write PADMet files, JOSS, https://doi.org/XXXXXXX
+```
+
+## Minimum Supported Rust Version
+
+Currently the minimum supported Rust version is 1.86.

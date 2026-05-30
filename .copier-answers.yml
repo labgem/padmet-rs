@@ -1,0 +1,17 @@
+# Changes here will be overwritten by Copier
+_commit: 1.10.2
+_src_path: gh:natir/copier-rust
+author_email: samuel@ortion.fr
+author_name: Samuel Ortion
+bin: true
+ci: gitlab
+copyright_date: '2026'
+copyright_holder: Samuel Ortion
+copyright_holder_email: samuel@ortion.fr
+copyright_license: GPL-3.0
+forge_namespace: sortion
+forge_repo_name: padmet
+lib: true
+msrv: '1.86'
+project_description: Read and write PADMet files
+project_name: padmet

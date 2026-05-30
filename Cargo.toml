@@ -1,0 +1,84 @@
+[package]
+name    = "padmet"
+version = "0.1.0"
+authors = [
+	"Samuel Ortion <samuel@ortion.fr>"
+]
+
+description  = "Read and write PADMet files"
+edition      = "2024"
+rust-version = "1.86"
+
+homepage      = "https://s.ortion.fr/dev/padmet-rs"
+repository    = "https://forge.ortion.fr/sortion/padmet-rs"
+documentation = "https://s.ortion.fr/dev/padmet"
+
+readme       = "README.md"
+license-file = "LICENSE"
+
+
+[lib]
+name = "padmet"
+path = "src/lib.rs"
+
+[[bin]]
+name = "padmet"
+path = "src/main.rs"
+
+
+[dependencies]
+## CLI management
+clap        = { version = "4", features = ["derive"] }
+
+## Error management
+thiserror   = { version = "2" }
+anyhow      = { version = "1" }
+
+## Logging management
+log         = { version = "0.4" }
+stderrlog   = { version = "0.6" }
+
+
+## Profiling
+hotpath    = { version = "0.10" }
+peak_alloc = { version = "0.3", optional = true }
+
+[dev-dependencies]
+## Functional test
+assert_cmd = { version = "2" }
+tempfile   = { version = "3" }
+
+
+## Benchmark management
+criterion  = { version = "0.8" }
+
+
+[features]
+default = []
+bench = []
+
+profiling = ["dep:peak_alloc", "hotpath/hotpath", "hotpath/hotpath-alloc"]
+
+
+# [[bench]]
+# name              = "rev_comp"
+# required-features = ["bench"]
+# harness           = false
+
+
+[profile.release]
+lto             = 'thin'
+opt-level       = 3
+overflow-checks = false
+panic           = 'abort'
+incremental     = false
+
+
+[profile.bench]
+codegen-units = 16
+lto = "thin"
+
+
+[profile.profiling]
+inherits = "release"
+debug    = true
