@@ -16,13 +16,19 @@ use crate::relation::Relation;
 
 #[derive(Debug, Clone)]
 pub struct PadmetSpec {
+    /// A dictionnary from node identifier to the list of relations coming from this node
     pub dic_of_relations_in: HashMap<String, Vec<Relation>>,
+    /// A dictionnaru from node identifier to the list of relations coming to this node
     pub dic_of_relations_out: HashMap<String, Vec<Relation>>,
+    /// A dictionnary from node identifier to the node struct
     pub dic_of_nodes: HashMap<String, Node>,
+    /// The policy
     pub policy: Policy,
+    /// Metadata of the PADMet object
     pub info: HashMap<String, HashMap<String, String>>,
 }
 
+/// Flag the section of the PADMet file
 #[derive(PartialEq)]
 pub enum PadmetSection {
     Default,
@@ -33,6 +39,7 @@ pub enum PadmetSection {
 }
 
 impl PadmetSpec {
+    /// Create a PadmetSpec
     pub fn new(
         dic_of_relations_in: HashMap<String, Vec<Relation>>,
         dic_of_relations_out: HashMap<String, Vec<Relation>>,
@@ -49,6 +56,7 @@ impl PadmetSpec {
         }
     }
 
+    /// Load a PadmetSpec from a file
     pub fn from_file<P>(filename: P) -> io::Result<PadmetSpec>
     where
         P: AsRef<Path>,

@@ -3,7 +3,7 @@ title        = "padmet-rs"
 authors      = ["Samuel Ortion"]
 description  = "Read and write PADMet files in Rust"
 language     = "en"
-multilingual = false
+# multilingual = false
 src          = "website"
 
 [build]
@@ -14,6 +14,6 @@ create-missing = false
 smart-punctuation = true
 mathjax-support = true
 git-repository-url = "https://forge.s1gm4.eu/sortion/padmet-rs/"
-git-repository-icon = "fa-git"
-edit-url-template = "https://forge.s1gm4.eu/sortion/padmet/edit/main/docs/{path}"
+git-repository-icon = "fab-git"
+edit-url-template = "https://forge.s1gm4.eu/sortion/padmet/_edit/main/docs/{path}"
 site-url = "https://s.ortion.fr/dev/padmet-rs/"
