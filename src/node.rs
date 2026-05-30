@@ -1,7 +1,7 @@
 
 use std::collections::HashMap;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Node {
     pub node_type: String,
     pub node_id: String,

@@ -17,3 +17,4 @@ website/.rustc_info.json
 website/.rustdoc_fingerprint.json
 website/doc/
 website/tarpaulin-report.html
+

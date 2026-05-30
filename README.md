@@ -1,4 +1,4 @@
-# padmet 🧬 💻
+# padmet-rs
 <!-- 
 ![tests](https://github.com/sortion/padmet/workflows/tests/badge.svg)
 ![lints](https://github.com/sortion/padmet/workflows/lints/badge.svg)
@@ -9,7 +9,10 @@
 [![copier](https://img.shields.io/badge/copier-template-yellow)](https://github.com/natir/copier-rust)
 -->
 
-Read and write PADMet files
+Read <!-- and write --> PADMet files in Rust.
+
+
+[PADMet](https://padmet.readthedocs.io/) is a file format to store metadata on metabolic networks. `padmet-rs` is a Rust library allowing to read PADMet files.
 
 ## Usage
 
@@ -26,11 +29,12 @@ cd
 cargo install --path
 ```
 
-## How to cite
+<!-- ## How to cite
 
 ```
 Samuel Ortion, padmet: Read and write PADMet files, JOSS, https://doi.org/XXXXXXX
 ```
+-->
 
 ## Minimum Supported Rust Version
 

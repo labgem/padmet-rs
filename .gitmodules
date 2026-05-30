@@ -1,0 +1,3 @@
+[submodule "vendor/padmet"]
+	path = vendor/padmet
+	url = https://github.com/AuReMe/padmet.git
