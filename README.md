@@ -1,5 +1,5 @@
 # padmet-rs
-<!-- 
+
 ![tests](https://github.com/sortion/padmet/workflows/tests/badge.svg)
 ![lints](https://github.com/sortion/padmet/workflows/lints/badge.svg)
 ![msrv](https://github.com/sortion/padmet/workflows/msrv/badge.svg)
@@ -7,7 +7,7 @@
 [![dev-doc](https://img.shields.io/badge/dev-doc-blue)](https://sortion.github.io/padmet/doc/padmet)
 [![license](https://img.shields.io/badge/license--purple)](/blob/main/LICENSE)
 [![copier](https://img.shields.io/badge/copier-template-yellow)](https://github.com/natir/copier-rust)
--->
+
 
 Read <!-- and write --> PADMet files in Rust.
 
@@ -18,14 +18,14 @@ Read <!-- and write --> PADMet files in Rust.
 
 Add this in your Cargo.toml
 ```
-padmet = { version = "0.1" }
+padmet = { version = "0.1.0" }
 ```
 
 ### From source
 
 ```bash
-git clone {repository_uri}
-cd 
+git clone https://github.com/labgem/padmet-rs.git
+cd padmet-rs
 cargo install --path
 ```
 

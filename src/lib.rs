@@ -7,13 +7,13 @@
 /* module declaration */
 
 pub mod cli;
-pub mod io;
 pub mod error;
+pub mod io;
 
-pub mod spec;
 pub mod node;
-pub mod relation;
 pub mod policy;
+pub mod relation;
+pub mod spec;
 
 /* project use */
 

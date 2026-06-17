@@ -42,6 +42,7 @@ stderrlog   = { version = "0.6" }
 ## Profiling
 hotpath    = { version = "0.10" }
 peak_alloc = { version = "0.3", optional = true }
+serde_yaml = "0.9.34"
 
 [dev-dependencies]
 ## Functional test

@@ -11,7 +11,7 @@ use std::path::Path;
 /* project use */
 use crate::io::read_lines;
 use crate::node::Node;
-use crate::policy::Policy;
+// use crate::policy::Policy;
 use crate::relation::Relation;
 
 #[derive(Debug, Clone)]
@@ -22,8 +22,8 @@ pub struct PadmetSpec {
     pub dic_of_relations_out: HashMap<String, Vec<Relation>>,
     /// A dictionnary from node identifier to the node struct
     pub dic_of_nodes: HashMap<String, Node>,
-    /// The policy
-    pub policy: Policy,
+    // /// The policy
+    // pub policy: Policy,
     /// Metadata of the PADMet object
     pub info: HashMap<String, HashMap<String, String>>,
 }
@@ -44,14 +44,14 @@ impl PadmetSpec {
         dic_of_relations_in: HashMap<String, Vec<Relation>>,
         dic_of_relations_out: HashMap<String, Vec<Relation>>,
         dic_of_nodes: HashMap<String, Node>,
-        policy: Policy,
+        // policy: Policy,
         info: HashMap<String, HashMap<String, String>>,
     ) -> Self {
         PadmetSpec {
             dic_of_relations_in,
             dic_of_relations_out,
             dic_of_nodes,
-            policy,
+            // policy,
             info,
         }
     }
@@ -64,7 +64,7 @@ impl PadmetSpec {
         let mut dic_of_relations_in: HashMap<String, Vec<Relation>> = HashMap::new();
         let mut dic_of_relations_out: HashMap<String, Vec<Relation>> = HashMap::new();
         let mut dic_of_nodes: HashMap<String, Node> = HashMap::new();
-        let mut policy: Policy = Policy::new();
+        // let mut policy: Policy = Policy::new();
         let mut info: HashMap<String, HashMap<String, String>> = HashMap::new();
 
         let mut padmet_section: PadmetSection = PadmetSection::Default;
@@ -172,7 +172,7 @@ impl PadmetSpec {
             dic_of_relations_in,
             dic_of_relations_out,
             dic_of_nodes,
-            policy,
+            // policy,
             info,
         );
         Ok(padmet_object)
@@ -313,16 +313,21 @@ mod tests {
         let pathways = padmet_object.get_pathways();
         assert!(pathways.len() > 0);
     }
-    
+
     #[test]
     fn test_get_reactions_of_pathway() {
-                let padmet_test_file_1: PathBuf =
+        let padmet_test_file_1: PathBuf =
             PathBuf::from("vendor/padmet/tests/test_data/padmet/padmet_1.padmet");
         let padmet_object: PadmetSpec = PadmetSpec::from_file(padmet_test_file_1).unwrap();
         let pathways = padmet_object.get_pathways();
         let pathway_reactions = padmet_object.get_pathways_reactions();
         assert_eq!(pathways.len(), pathway_reactions.len());
-        assert!(pathway_reactions.get("FAO-PWY").expect("pathway FAO-PWY should exist in the test padmet file").len() > 0);
+        assert!(
+            pathway_reactions
+                .get("FAO-PWY")
+                .expect("pathway FAO-PWY should exist in the test padmet file")
+                .len()
+                > 0
+        );
     }
-
 }
