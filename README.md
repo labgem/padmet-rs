@@ -5,7 +5,7 @@
 ![msrv](https://github.com/labgem/padmet/workflows/msrv/badge.svg)
 [![website](https://github.com/labgem/padmet/workflows/website/badge.svg)](https://labgem.github.io/padmet)
 [![dev-doc](https://img.shields.io/badge/dev-doc-blue)](https://labgem.github.io/padmet/doc/padmet)
-[![license](https://img.shields.io/badge/license--purple)](/blob/main/LICENSE)
+[![license](https://img.shields.io/badge/license-GPLv3-purple)](/blob/main/LICENSE)
 [![copier](https://img.shields.io/badge/copier-template-yellow)](https://github.com/natir/copier-rust)
 
 

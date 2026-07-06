@@ -15,5 +15,5 @@ smart-punctuation = true
 mathjax-support = true
 git-repository-url = "https://github.com/labgem/padmet-rs/"
 git-repository-icon = "fab-git"
-edit-url-template = "https://forge.s1gm4.eu/sortion/padmet/_edit/main/docs/{path}"
+edit-url-template = "https://github.com/samuelortion/padmet-rs/edit/main/website/{path}.md"
 site-url = "https://s.ortion.fr/dev/padmet-rs/"
