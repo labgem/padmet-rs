@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+        with:
+          submodules: 'recursive' # to include python PADMet test data
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:

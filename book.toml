@@ -13,7 +13,7 @@ create-missing = false
 [output.html]
 smart-punctuation = true
 mathjax-support = true
-git-repository-url = "https://forge.s1gm4.eu/sortion/padmet-rs/"
+git-repository-url = "https://github.com/labgem/padmet-rs/"
 git-repository-icon = "fab-git"
 edit-url-template = "https://forge.s1gm4.eu/sortion/padmet/_edit/main/docs/{path}"
 site-url = "https://s.ortion.fr/dev/padmet-rs/"

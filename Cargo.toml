@@ -5,13 +5,13 @@ authors = [
 	"Samuel Ortion <samuel@ortion.fr>"
 ]
 
-description  = "Read and write PADMet files"
+description  = "Read PADMet files"
 edition      = "2024"
 rust-version = "1.86"
 
 homepage      = "https://s.ortion.fr/dev/padmet-rs"
 repository    = "https://forge.ortion.fr/sortion/padmet-rs"
-documentation = "https://s.ortion.fr/dev/padmet"
+documentation = "https://s.ortion.fr/dev/padmet-rs"
 
 readme       = "README.md"
 license-file = "LICENSE"
@@ -59,13 +59,6 @@ default = []
 bench = []
 
 profiling = ["dep:peak_alloc", "hotpath/hotpath", "hotpath/hotpath-alloc"]
-
-
-# [[bench]]
-# name              = "rev_comp"
-# required-features = ["bench"]
-# harness           = false
-
 
 [profile.release]
 lto             = 'thin'

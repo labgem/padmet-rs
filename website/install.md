@@ -1,23 +1,14 @@
 # Install
 
-FOR LIB PACKAGE START
-
 Add this in your Cargo.toml
 ```
-rev_comp = { version = "0.1" }
+padmet = { version = "0.1" }
 ```
 
-FOR LIB PACKAGE END
-
-
-FOR BIN PACKAGE START
-
-### From source
+<!-- ### From source
 
 ```bash
-git clone {repository_uri}
-cd rev_comp
+git clone https://github.com/labgem/padmet-rs.git
+cd padmet-rs
 cargo install --path
-```
-
-FOR BIN PACKAGE END
+``` -->
